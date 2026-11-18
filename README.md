@@ -1,8 +1,21 @@
 # App Navigator · APP 操作向导
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-blueviolet)
+![Python](https://img.shields.io/badge/Python-3.x-green)
+![WorkBuddy](https://img.shields.io/badge/WorkBuddy-Skill-orange)
+
 > 用户上传一张 APP 截图 + 说明想完成的任务，AI 看着当前这一屏推理出下一步该点哪里，在原图上画红框/箭头/序号返回；用户照着点完再回传新截图，一步步直到任务解决。
 
 一个 [WorkBuddy](https://www.workbuddy.cn/) Skill。它不写教程文章，而是**陪一个人把手头的任务做完**。
+
+## 效果预览
+
+用户传图 → AI 圈出下一步 → 用户照着点 → 回传新图，如此循环：
+
+![第一步标注效果](assets/demo.png)
+
+*红框圈住目标按钮，配序号与中文标签——用户不用读文字描述，照着点即可。*
 
 ## 它解决什么
 
@@ -43,6 +56,10 @@ C:\Users\<你>\.workbuddy\skills\app-navigator\   # Windows
 ```
 app-navigator/
 ├── SKILL.md                 # 工作流大脑：硬规矩 + Step 0~4 + 反模式
+├── README.md                # 本说明
+├── LICENSE                  # MIT 开源协议
+├── assets/
+│   └── demo.png             # 演示标注效果图
 └── scripts/
     └── annotate.py          # 标注引擎：归一化坐标 → 红框/序号/中文标签/箭头
 ```
@@ -72,4 +89,4 @@ python annotate.py --image <原图> --output <输出图> --marks-file <marks.jso
 
 ## License
 
-MIT
+本项目采用 [MIT License](LICENSE)，可自由使用、修改、分发，包括商用。唯一要求是保留版权声明。
